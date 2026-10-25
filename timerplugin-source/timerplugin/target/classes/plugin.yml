@@ -1,0 +1,38 @@
+name: TimerPlugin
+version: '1.0.0'
+main: com.example.timerplugin.TimerPlugin
+api-version: '1.21'
+author: Claude
+description: פלאגין עם טיימר bossbar, אירועים אקראיים, לוט דרופים, ומתכון מותאם למייס
+
+commands:
+  timer:
+    description: מתחיל טיימר עם bossbar שמציג ספירה לאחור
+    usage: "/timer <זמן, לדוגמה 1d1h1m1s> | /timer cancel"
+    permission: timer.use
+  event:
+    description: מפעיל אירוע אקראי ידנית או מציג רשימת אירועים
+    usage: "/event run <שם אירוע> | /event list"
+    permission: event.use
+  start:
+    description: מפעיל את המשחק - טיימר לשעה + מחזור אירועים כל 10 דקות
+    usage: "/start | /start stop"
+    permission: start.use
+  lootdrop:
+    description: מתחיל מחזור לוט דרופ - 2 חביות אוצר במהלך חצי שעה
+    usage: "/lootdrop start | /lootdrop test"
+    permission: lootdrop.use
+
+permissions:
+  timer.use:
+    description: מאפשר שימוש בפקודת /timer
+    default: op
+  event.use:
+    description: מאפשר שימוש בפקודת /event
+    default: op
+  start.use:
+    description: מאפשר שימוש בפקודת /start
+    default: op
+  lootdrop.use:
+    description: מאפשר שימוש בפקודת /lootdrop
+    default: op
